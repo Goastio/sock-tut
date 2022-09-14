@@ -9,7 +9,8 @@ import { useState } from "react";
 
 const mountOpts = [
   { id: 1, name: "mount [-h|-V]" },
-  // More users...
+  { id: 2, name: "mount test" },
+  { id: 3, name: "mount lorem" },
 ];
 
 function classNames(...classes) {
@@ -89,22 +90,6 @@ const Custom = () => {
               />
             </label>
             <label className="w-full flex flex-col text-white gap-1.6">
-              Type
-              <input
-                type="text"
-                className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
-              />
-            </label>
-          </div>
-          <div className="flex gap-5">
-            <label className="w-full flex flex-col text-white gap-1.6">
-              Size
-              <input
-                type="text"
-                className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
-              />
-            </label>
-            <label className="w-full flex flex-col text-white gap-1.6">
               Filesystem
               <input
                 type="text"
@@ -114,9 +99,26 @@ const Custom = () => {
           </div>
           <div className="flex gap-5">
             <label className="w-full flex flex-col text-white gap-1.6">
+              Type
+              <input
+                type="text"
+                className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
+              />
+            </label>
+            <label className="w-full flex flex-col text-white gap-1.6">
               Mount point
               <input
                 type="text"
+                className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
+              />
+            </label>
+          </div>
+          <div className="flex gap-5">
+            <label className="w-full flex flex-col text-white gap-1.6 pointer-events-none">
+              Size
+              <input
+                type="text"
+                placeholder="insert size here"
                 className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
               />
             </label>
@@ -126,12 +128,12 @@ const Custom = () => {
                 value={selectedMount}
                 onChange={setSelectedMount}
               >
-                <Combobox.Label className="block text-white">
+                <Combobox.Label className="block text-gray-700">
                   Mount options
                 </Combobox.Label>
                 <div className="relative">
                   <Combobox.Input
-                    className="w-full rounded-md border-gray-300 bg-white bg-opacity-5 py-2 pl-3 pr-10 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+                    className="w-full rounded-md bg-white bg-opacity-5 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
                     onChange={(event) => setQuery(event.target.value)}
                     displayValue={(mount) => mount?.name}
                   />
@@ -143,16 +145,16 @@ const Custom = () => {
                   </Combobox.Button>
 
                   {filterMount.length > 0 && (
-                    <Combobox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-black py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                      {filterMount.map((person) => (
+                    <Combobox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg px-[4px] ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm text-black">
+                      {filterMount.map((mount) => (
                         <Combobox.Option
-                          key={person.id}
-                          value={person}
+                          key={mount.id}
+                          value={mount}
                           className={({ active }) =>
                             classNames(
-                              "relative cursor-default select-none py-2 pl-3 pr-9",
+                              "relative cursor-default select-none p-2.5",
                               active
-                                ? "bg-indigo-600 text-white"
+                                ? "hover:bg-indigo hover:text-white transition rounded-md"
                                 : "text-gray-900"
                             )
                           }
@@ -165,7 +167,7 @@ const Custom = () => {
                                   selected && "font-semibold"
                                 )}
                               >
-                                {person.name}
+                                {mount.name}
                               </span>
 
                               {selected && (
@@ -174,12 +176,7 @@ const Custom = () => {
                                     "absolute inset-y-0 right-0 flex items-center pr-4",
                                     active ? "text-black" : "text-indigo-600"
                                   )}
-                                >
-                                  <FiChevronDown
-                                    className="h-5 w-5"
-                                    aria-hidden="true"
-                                  />
-                                </span>
+                                ></span>
                               )}
                             </>
                           )}
