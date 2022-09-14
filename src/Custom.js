@@ -5,14 +5,55 @@ import { ReflexContainer, ReflexSplitter, ReflexElement } from "react-reflex";
 import "react-reflex/styles.css";
 
 const Custom = () => {
+  const partitionExamples = [
+    {
+      Name: "partition 1",
+      Size: "30GB",
+      Mount: "/boot",
+      Type: "Non-DOS",
+      Filesystem: "Ext2",
+      MountOptions: "Lorem",
+    },
+    {
+      Name: "partition 2",
+      Size: "25GB",
+      Mount: "/test",
+      Type: "Non-DOS",
+      Filesystem: "Ext3",
+      MountOptions: "Lorem",
+    },
+    {
+      Name: "partition 3",
+      Size: "5GB",
+      Mount: "/rocket",
+      Type: "DOS",
+      Filesystem: "Ext4",
+      MountOptions: "Lorem",
+    },
+    {
+      Name: "partition 4",
+      Size: "122GB",
+      Mount: "/big",
+      Type: "Non-DOS",
+      Filesystem: "Ext5",
+      MountOptions: "Lorem",
+    },
+  ];
+
   return (
-    <div className="flex flex-col h-screen bg-[#151819] justify-center p-52">
+    <div className="flex flex-col h-screen bg-[#151819] justify-center">
       <div className="flex rounded-md border border-[#374151] max-w-screen-md mx-auto w-full p-5 flex-col gap-5">
         <div className="flex h-10 bg-gray rounded-md shadow-md overflow-hidden">
           <ReflexContainer orientation="vertical">
-            <ReflexElement minSize="50" className="left-pane">
-              <div className="flex bg-blue h-full" />
+            <ReflexElement minSize="60" className="left-pane">
+              <button className="flex bg-blue w-full h-full text-sm justify-center items-center">
+                <div className="flex flex-col hover:cursor-default">
+                  <span>p1: 30G</span>
+                  <span>md0</span>
+                </div>
+              </button>
             </ReflexElement>
+
             <ReflexSplitter propagate={true} />
             <ReflexElement minSize="50" className="left-pane">
               <div className="flex bg-indigo h-full" />
@@ -41,31 +82,49 @@ const Custom = () => {
           <div className="flex gap-5">
             <label className="w-full flex flex-col text-white gap-1.6">
               Name
-              <input type="text" className="w-full py-2 px-3" />
+              <input
+                type="text"
+                className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
+              />
             </label>
             <label className="w-full flex flex-col text-white gap-1.6">
               Type
-              <input type="text" className="w-full py-2 px-3" />
+              <input
+                type="text"
+                className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
+              />
             </label>
           </div>
           <div className="flex gap-5">
             <label className="w-full flex flex-col text-white gap-1.6">
               Size
-              <input type="text" className="w-full py-2 px-3" />
+              <input
+                type="text"
+                className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
+              />
             </label>
             <label className="w-full flex flex-col text-white gap-1.6">
               Filesystem
-              <input type="text" className="w-full py-2 px-3" />
+              <input
+                type="text"
+                className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
+              />
             </label>
           </div>
           <div className="flex gap-5">
             <label className="w-full flex flex-col text-white gap-1.6">
               Mount point
-              <input type="text" className="w-full py-2 px-3" />
+              <input
+                type="text"
+                className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
+              />
             </label>
             <label className="w-full flex flex-col text-white gap-1.6">
               Mount options
-              <input type="text" className="w-full py-2 px-3" />
+              <input
+                type="text"
+                className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
+              />
             </label>
           </div>
         </div>
