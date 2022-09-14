@@ -1,45 +1,11 @@
 import "./index.css";
 import { BsPlusSquare } from "react-icons/bs";
+import { FiChevronDown } from "react-icons/fi";
 import { ReflexContainer, ReflexSplitter, ReflexElement } from "react-reflex";
 
 import "react-reflex/styles.css";
 
 const Custom = () => {
-  const partitionExamples = [
-    {
-      Name: "partition 1",
-      Size: "30GB",
-      Mount: "/boot",
-      Type: "Non-DOS",
-      Filesystem: "Ext2",
-      MountOptions: "Lorem",
-    },
-    {
-      Name: "partition 2",
-      Size: "25GB",
-      Mount: "/test",
-      Type: "Non-DOS",
-      Filesystem: "Ext3",
-      MountOptions: "Lorem",
-    },
-    {
-      Name: "partition 3",
-      Size: "5GB",
-      Mount: "/rocket",
-      Type: "DOS",
-      Filesystem: "Ext4",
-      MountOptions: "Lorem",
-    },
-    {
-      Name: "partition 4",
-      Size: "122GB",
-      Mount: "/big",
-      Type: "Non-DOS",
-      Filesystem: "Ext5",
-      MountOptions: "Lorem",
-    },
-  ];
-
   return (
     <div className="flex flex-col h-screen bg-[#151819] justify-center">
       <div className="flex rounded-md border border-[#374151] max-w-screen-md mx-auto w-full p-5 flex-col gap-5">
@@ -121,10 +87,12 @@ const Custom = () => {
             </label>
             <label className="w-full flex flex-col text-white gap-1.6">
               Mount options
-              <input
-                type="text"
-                className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
-              />
+              <button className="flex w-full relative items-center">
+                <input className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md" />
+                <div className="flex absolute justify-end w-full pr-2.5">
+                  <FiChevronDown />
+                </div>
+              </button>
             </label>
           </div>
         </div>
