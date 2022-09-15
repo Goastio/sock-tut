@@ -28,48 +28,80 @@ const Custom = () => {
         });
 
   return (
-    <div className="flex flex-col h-screen bg-white justify-center text-black">
-      <div className="flex rounded-md border border-[#374151] max-w-screen-md mx-auto w-full p-5 flex-col gap-5">
-        <div className="flex h-10 bg-gray rounded-md shadow-md overflow-hidden">
+    <div className="flex h-screen flex-col justify-center bg-white text-black">
+      <div className="mx-auto flex w-full max-w-screen-md flex-col gap-5 rounded-md border border-gray p-5">
+        <div className="flex h-10 overflow-hidden rounded-md bg-gray shadow-md">
           <ReflexContainer orientation="vertical">
             <ReflexElement minSize="60" maxSize="200" className="left-pane">
-              <div className="flex w-full h-full flex-col">
-                <button className="flex focus:border-black focus:border-2 bg-blue w-full h-full text-sm justify-center items-center">
+              <div className="flex h-full w-full flex-col">
+                <button className="flex h-full w-full items-center justify-center bg-blue text-sm focus:border-2 focus:border-black">
                   <span>p1: 30G</span>
                   <span>md0</span>
                 </button>
               </div>
             </ReflexElement>
-            <ReflexSplitter propagate={true} />
+            <ReflexSplitter
+              style={{
+                height: "100%",
+                width: "7px",
+                backgroundColor: "#98989D",
+                borderRadius: "0.375rem",
+              }}
+              propagate={true}
+            />
             <ReflexElement minSize="60" maxSize="200" className="left-pane">
-              <button className="flex bg-indigo w-full h-full text-sm justify-center items-center active:border-white">
-                <div className="flex flex-col">
+              <div className="flex h-full w-full flex-col">
+                <button className="flex h-full w-full items-center justify-center bg-indigo text-sm focus:border-2 focus:border-black">
                   <span>p1: 30G</span>
                   <span>md0</span>
-                </div>
-              </button>
+                </button>
+              </div>
             </ReflexElement>
-            <ReflexSplitter propagate={true} />
+            <ReflexSplitter
+              style={{
+                height: "100%",
+                width: "7px",
+                backgroundColor: "#98989D",
+                borderRadius: "0.375rem",
+              }}
+              propagate={true}
+            />
             <ReflexElement minSize="60" maxSize="200" className="left-pane">
-              <button className="flex bg-purple w-full h-full text-sm justify-center items-center active:border-white">
-                <div className="flex flex-col">
+              <div className="flex h-full w-full flex-col">
+                <button className="flex h-full w-full items-center justify-center bg-purple text-sm focus:border-2 focus:border-black">
                   <span>p1: 30G</span>
                   <span>md0</span>
-                </div>
-              </button>
+                </button>
+              </div>
             </ReflexElement>
-            <ReflexSplitter propagate={true} />
+            <ReflexSplitter
+              style={{
+                height: "100%",
+                width: "7px",
+                backgroundColor: "#98989D",
+                borderRadius: "0.375rem",
+              }}
+              propagate={true}
+            />
             <ReflexElement minSize="60" maxSize="200" className="left-pane">
-              <button className="flex bg-pink w-full h-full text-sm justify-center items-center active:border-white">
-                <div className="flex flex-col">
+              <div className="flex h-full w-full flex-col">
+                <button className="flex h-full w-full items-center justify-center bg-pink text-sm focus:border-2 focus:border-black">
                   <span>p1: 30G</span>
                   <span>md0</span>
-                </div>
-              </button>
+                </button>
+              </div>
             </ReflexElement>
-            <ReflexSplitter propagate={true} />
+            <ReflexSplitter
+              style={{
+                height: "100%",
+                width: "7px",
+                backgroundColor: "#98989D",
+                borderRadius: "0.375rem",
+              }}
+              propagate={true}
+            />
             <ReflexElement minSize="125" className="left-pane">
-              <div className="flex h-full justify-center items-center gap-2.5 overflow-hidden">
+              <div className="flex h-full items-center justify-center gap-2.5 overflow-hidden">
                 <div className="flex text-xs">free 1.62TB</div>
                 <button className="flex">
                   <BsPlusSquare className="text-xl opacity-75" />
@@ -79,71 +111,71 @@ const Custom = () => {
           </ReflexContainer>
         </div>
 
-        <div className="gap-5 flex flex-col w-full max-w-screen-md mx-auto">
+        <div className="mx-auto flex w-full max-w-screen-md flex-col gap-5">
           <div className="flex gap-5">
-            <label className="w-full flex flex-col gap-1.6">
+            <label className="gap-1.6 flex w-full flex-col">
               Name
               <input
                 type="text"
-                className="w-full text-sm py-2 px-3 border border-gray-200 rounded-md"
+                className="border-gray-200 w-full rounded-md border py-2 px-3 text-sm"
               />
             </label>
-            <label className="w-full flex flex-col gap-1.6">
+            <label className="gap-1.6 flex w-full flex-col">
               Filesystem
               <input
                 type="text"
-                className="w-full text-sm py-2 px-3 border border-gray-200 rounded-md"
+                className="border-gray-200 w-full rounded-md border py-2 px-3 text-sm"
               />
             </label>
           </div>
           <div className="flex gap-5">
-            <label className="w-full flex flex-col gap-1.6">
+            <label className="gap-1.6 flex w-full flex-col">
               Type
               <input
                 type="text"
-                className="w-full text-sm py-2 px-3 border border-gray-200 rounded-md"
+                className="border-gray-200 w-full rounded-md border py-2 px-3 text-sm"
               />
             </label>
-            <label className="w-full flex flex-col gap-1.6">
+            <label className="gap-1.6 flex w-full flex-col">
               Mount point
               <input
                 type="text"
-                className="w-full text-sm py-2 px-3 border border-gray-200 rounded-md"
+                className="border-gray-200 w-full rounded-md border py-2 px-3 text-sm"
               />
             </label>
           </div>
           <div className="flex gap-5">
-            <label className="w-full flex flex-col gap-1.6 pointer-events-none">
+            <label className="gap-1.6 pointer-events-none flex w-full flex-col">
               Size
               <input
                 type="text"
-                className="w-full text-sm py-2 px-3 border border-gray-200 rounded-md"
+                className="border-gray-200 w-full rounded-md border py-2 px-3 text-sm"
               />
             </label>
-            <label className="w-full flex flex-col gap-1.6">
+            <label className="gap-1.6 flex w-full flex-col">
               <Combobox
                 as="div"
                 value={selectedMount}
                 onChange={setSelectedMount}
               >
-                <Combobox.Label className="block text-gray-700">
+                <Combobox.Label className="text-gray-700 block">
                   Mount options
                 </Combobox.Label>
                 <div className="relative">
                   <Combobox.Input
-                    className="w-full rounded-md bg-white bg-opacity-5 py-2 px-3 shadow-sm focus:border-indigo focus:outline-none border border-gray-200 focus:ring-1 focus:ring-indigo sm:text-sm"
+                    className="border-gray-200 w-full rounded-md border bg-white bg-opacity-5 py-2 px-3 shadow-sm focus:border-indigo focus:outline-none focus:ring-1 focus:ring-indigo sm:text-sm"
                     onChange={(event) => setQuery(event.target.value)}
                     displayValue={(mount) => mount?.name}
                   />
                   <Combobox.Button className="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none">
                     <FiChevronDown
-                      className="h-5 w-5 text-gray-400"
+                      className="text-gray-400 h-5 w-5"
                       aria-hidden="true"
                     />
                   </Combobox.Button>
 
                   {filterMount.length > 0 && (
-                    <Combobox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg px-[4px] ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm text-black">
+                    <Combobox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 px-[4px] text-base text-black shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                       {filterMount.map((mount) => (
                         <Combobox.Option
                           key={mount.id}
@@ -152,7 +184,7 @@ const Custom = () => {
                             classNames(
                               "relative cursor-default select-none p-2.5",
                               active
-                                ? "hover:bg-indigo hover:text-white transition rounded-md"
+                                ? "rounded-md transition hover:bg-indigo hover:text-white"
                                 : "text-gray-900"
                             )
                           }
