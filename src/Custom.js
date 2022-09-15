@@ -30,76 +30,70 @@ const Custom = () => {
   return (
     <div className="flex h-screen flex-col justify-center bg-white text-black">
       <div className="mx-auto flex w-full max-w-screen-md flex-col gap-5 rounded-md border border-gray p-5">
-        <div className="flex h-10 overflow-hidden rounded-md bg-gray shadow-md">
+        <div className="flex h-10 overflow-hidden rounded-md bg-gray">
           <ReflexContainer orientation="vertical">
-            <ReflexElement minSize="60" maxSize="200" className="left-pane">
+            <ReflexElement minSize="100" maxSize="200" className="left-pane">
               <div className="flex h-full w-full flex-col">
-                <button className="flex h-full w-full items-center justify-center bg-blue text-sm focus:border-2 focus:border-black">
+                <button className="flex h-full w-full flex-row items-center justify-center bg-blue text-sm focus:border-2">
                   <span>p1: 30G</span>
                   <span>md0</span>
                 </button>
               </div>
             </ReflexElement>
-            <ReflexSplitter
-              style={{
-                height: "100%",
-                width: "7px",
-                backgroundColor: "#98989D",
-                borderRadius: "0.375rem",
-              }}
-              propagate={true}
-            />
-            <ReflexElement minSize="60" maxSize="200" className="left-pane">
+
+            {
+              /* (secondPartition &&) by default it won't display the splitter on first partition */
+              <ReflexSplitter style={{ cursor: "pointer" }} propagate={true}>
+                <div className="m-[-4px] mt-[1px] flex h-full w-full">
+                  <div className="flex self-center rounded-full bg-neutral-700 py-3 px-1 transition duration-200 hover:bg-neutral-900"></div>
+                </div>
+              </ReflexSplitter>
+            }
+            <ReflexElement minSize="100" maxSize="200" className="left-pane">
+              <div className="flex h-full w-full">
+                <button className="flex h-full w-full flex-row items-center justify-center bg-indigo text-sm focus:border-2 focus:border-black">
+                  <span>p1: 30G</span> &nbsp;
+                  <span>md0</span>
+                </button>
+              </div>
+            </ReflexElement>
+
+            <ReflexSplitter style={{ cursor: "pointer" }} propagate={true}>
+              <div className="m-[-4px] mt-[1px] flex h-full w-full">
+                <div className="flex self-center rounded-full bg-neutral-700 py-3 px-1 transition duration-200 hover:bg-neutral-900"></div>
+              </div>
+            </ReflexSplitter>
+
+            <ReflexElement minSize="100" maxSize="200" className="left-pane">
               <div className="flex h-full w-full flex-col">
-                <button className="flex h-full w-full items-center justify-center bg-indigo text-sm focus:border-2 focus:border-black">
+                <button className="flex h-full w-full flex-row items-center justify-center bg-purple text-sm focus:border-2 focus:border-black">
                   <span>p1: 30G</span>
                   <span>md0</span>
                 </button>
               </div>
             </ReflexElement>
-            <ReflexSplitter
-              style={{
-                height: "100%",
-                width: "7px",
-                backgroundColor: "#98989D",
-                borderRadius: "0.375rem",
-              }}
-              propagate={true}
-            />
-            <ReflexElement minSize="60" maxSize="200" className="left-pane">
+
+            <ReflexSplitter style={{ cursor: "pointer" }} propagate={true}>
+              <div className="m-[-4px] mt-[1px] flex h-full w-full">
+                <div className="flex self-center rounded-full bg-neutral-700 py-3 px-1 transition duration-200 hover:bg-neutral-900"></div>
+              </div>
+            </ReflexSplitter>
+
+            <ReflexElement minSize="100" maxSize="200" className="left-pane">
               <div className="flex h-full w-full flex-col">
-                <button className="flex h-full w-full items-center justify-center bg-purple text-sm focus:border-2 focus:border-black">
+                <button className="flex h-full w-full flex-row items-center justify-center bg-pink text-sm focus:border-2 focus:border-black">
                   <span>p1: 30G</span>
                   <span>md0</span>
                 </button>
               </div>
             </ReflexElement>
-            <ReflexSplitter
-              style={{
-                height: "100%",
-                width: "7px",
-                backgroundColor: "#98989D",
-                borderRadius: "0.375rem",
-              }}
-              propagate={true}
-            />
-            <ReflexElement minSize="60" maxSize="200" className="left-pane">
-              <div className="flex h-full w-full flex-col">
-                <button className="flex h-full w-full items-center justify-center bg-pink text-sm focus:border-2 focus:border-black">
-                  <span>p1: 30G</span>
-                  <span>md0</span>
-                </button>
+
+            <ReflexSplitter style={{ cursor: "pointer" }} propagate={true}>
+              <div className="m-[-4px] mt-[1px] flex h-full w-full">
+                <div className="flex self-center rounded-full bg-neutral-700 py-3 px-1 transition duration-200 hover:bg-neutral-900"></div>
               </div>
-            </ReflexElement>
-            <ReflexSplitter
-              style={{
-                height: "100%",
-                width: "7px",
-                backgroundColor: "#98989D",
-                borderRadius: "0.375rem",
-              }}
-              propagate={true}
-            />
+            </ReflexSplitter>
+
             <ReflexElement minSize="125" className="left-pane">
               <div className="flex h-full items-center justify-center gap-2.5 overflow-hidden">
                 <div className="flex text-xs">free 1.62TB</div>
