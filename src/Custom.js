@@ -3,7 +3,6 @@ import { BsPlusSquare } from "react-icons/bs";
 import { FiChevronDown } from "react-icons/fi";
 import { ReflexContainer, ReflexSplitter, ReflexElement } from "react-reflex";
 import { Combobox } from "@headlessui/react";
-
 import "react-reflex/styles.css";
 import { useState } from "react";
 
@@ -16,6 +15,7 @@ const mountOpts = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
+
 const Custom = () => {
   const [query, setQuery] = useState("");
   const [selectedMount, setSelectedMount] = useState();
@@ -28,7 +28,7 @@ const Custom = () => {
         });
 
   return (
-    <div className="flex flex-col h-screen bg-[#151819] justify-center">
+    <div className="flex flex-col h-screen bg-white justify-center text-black">
       <div className="flex rounded-md border border-[#374151] max-w-screen-md mx-auto w-full p-5 flex-col gap-5">
         <div className="flex h-10 bg-gray rounded-md shadow-md overflow-hidden">
           <ReflexContainer orientation="vertical">
@@ -40,7 +40,6 @@ const Custom = () => {
                 </div>
               </button>
             </ReflexElement>
-
             <ReflexSplitter propagate={true} />
             <ReflexElement minSize="60" maxSize="200" className="left-pane">
               <button className="flex bg-indigo w-full h-full text-sm justify-center items-center active:border-white">
@@ -58,7 +57,7 @@ const Custom = () => {
                   <span>md0</span>
                 </div>
               </button>
-            </ReflexElement>
+            </ReflexElement>  
             <ReflexSplitter propagate={true} />
             <ReflexElement minSize="60" maxSize="200" className="left-pane">
               <button className="flex bg-pink w-full h-full text-sm justify-center items-center active:border-white">
@@ -89,11 +88,11 @@ const Custom = () => {
                 className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
               />
             </label>
-            <label className="w-full flex flex-col text-white gap-1.6">
+            <label className="w-full flex flex-col gap-1.6">
               Filesystem
               <input
                 type="text"
-                className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
+                className="w-full py-2 px-3 border border-gray-700 rounded-md"
               />
             </label>
           </div>
