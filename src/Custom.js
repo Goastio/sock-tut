@@ -32,9 +32,9 @@ const Custom = () => {
       <div className="mx-auto flex w-full max-w-screen-md flex-col gap-5 rounded-md border border-gray p-5">
         <div className="flex h-10 overflow-hidden rounded-md bg-gray text-xs">
           <ReflexContainer orientation="vertical">
-            <ReflexElement minSize="25" maxSize="150" className="left-pane">
+            <ReflexElement minSize="50" maxSize="150" className="left-pane">
               <div className="flex h-full w-full flex-col">
-                <button className="flex h-full w-full flex-col items-center justify-center bg-blue text-xs font-medium text-white focus:border-2 focus:border-black sm:text-sm">
+                <button className="flex h-full w-full flex-col items-center justify-center bg-blue text-xs font-medium text-white focus:border-2 focus:border-black focus:border-opacity-40 sm:text-sm">
                   <span className="text-md">p1: 30G</span>
                   <span>md0</span>
                 </button>
@@ -49,9 +49,9 @@ const Custom = () => {
                 </div>
               </ReflexSplitter>
             }
-            <ReflexElement minSize="25" maxSize="150" className="left-pane">
+            <ReflexElement minSize="50" maxSize="150" className="left-pane">
               <div className="flex h-full w-full flex-col">
-                <button className="flex h-full w-full flex-col items-center justify-center bg-indigo text-xs font-medium text-white focus:border-2 focus:border-black sm:text-sm">
+                <button className="flex h-full w-full flex-col items-center justify-center bg-indigo text-xs font-medium text-white focus:border-2 focus:border-black focus:border-opacity-40 sm:text-sm">
                   <span className="text-md">p2: 25G</span>
                   <span>md1</span>
                 </button>
@@ -64,9 +64,9 @@ const Custom = () => {
               </div>
             </ReflexSplitter>
 
-            <ReflexElement minSize="25" maxSize="150" className="left-pane">
+            <ReflexElement minSize="50" maxSize="150" className="left-pane">
               <div className="flex h-full w-full flex-col">
-                <button className="flex h-full w-full flex-col items-center justify-center bg-purple font-medium text-white focus:border-2 focus:border-black sm:text-sm">
+                <button className="flex h-full w-full flex-col items-center justify-center bg-purple font-medium text-white focus:border-2 focus:border-black focus:border-opacity-40 sm:text-sm">
                   <span className="text-md">p3: 10G</span>
                   <span>md2</span>
                 </button>
@@ -79,9 +79,9 @@ const Custom = () => {
               </div>
             </ReflexSplitter>
 
-            <ReflexElement minSize="25" maxSize="150" className="left-pane">
+            <ReflexElement minSize="50" maxSize="150" className="left-pane">
               <div className="flex h-full w-full flex-col">
-                <button className="flex h-full w-full flex-col items-center justify-center bg-pink text-xs font-medium text-white hover:bg-opacity-90 focus:border-2 focus:border-black sm:text-sm">
+                <button className="flex h-full w-full flex-col items-center justify-center bg-pink text-xs font-medium text-white hover:bg-opacity-90 focus:border-2 focus:border-black focus:border-opacity-40 sm:text-sm">
                   <span className="text-md">p4: 15G</span>
                   <span>md3</span>
                 </button>
@@ -94,7 +94,7 @@ const Custom = () => {
               </div>
             </ReflexSplitter>
 
-            <ReflexElement minSize="125" className="left-pane">
+            <ReflexElement minSize="20" className="left-pane">
               <div className="flex h-full items-center justify-center gap-2.5 overflow-hidden">
                 <div className="flex text-xs text-white sm:text-sm">
                   free: 1.62TB
@@ -108,9 +108,9 @@ const Custom = () => {
         </div>
         <div className="flex h-10 overflow-hidden rounded-md bg-gray text-xs">
           <ReflexContainer orientation="vertical">
-            <ReflexElement minSize="25" maxSize="150" className="left-pane">
+            <ReflexElement minSize="50" maxSize="150" className="left-pane">
               <div className="flex h-full w-full flex-col">
-                <button className="flex h-full w-full flex-col items-center justify-center bg-blue text-xs font-medium text-white focus:border-2 focus:border-black sm:text-sm">
+                <button className="flex h-full w-full flex-col items-center justify-center bg-blue text-xs font-medium text-white focus:border-2 focus:border-black focus:border-opacity-40 sm:text-sm">
                   <span className="text-md">p1: 30G</span>
                   <span>md0</span>
                 </button>
@@ -125,9 +125,9 @@ const Custom = () => {
                 </div>
               </ReflexSplitter>
             }
-            <ReflexElement minSize="25" maxSize="150" className="left-pane">
+            <ReflexElement minSize="50" maxSize="150" className="left-pane">
               <div className="flex h-full w-full flex-col">
-                <button className="flex h-full w-full flex-col items-center justify-center bg-indigo text-xs font-medium text-white focus:border-2 focus:border-black sm:text-sm">
+                <button className="flex h-full w-full flex-col items-center justify-center bg-indigo text-xs font-medium text-white focus:border-2 focus:border-black focus:border-opacity-40 sm:text-sm">
                   <span className="text-md">p2: 25G</span>
                   <span>md1</span>
                 </button>
@@ -140,9 +140,9 @@ const Custom = () => {
               </div>
             </ReflexSplitter>
 
-            <ReflexElement minSize="25" maxSize="150" className="left-pane">
+            <ReflexElement minSize="50" maxSize="150" className="left-pane">
               <div className="flex h-full w-full flex-col">
-                <button className="flex h-full w-full flex-col items-center justify-center bg-purple text-xs font-medium text-white focus:border-2 focus:border-black sm:text-sm">
+                <button className="flex h-full w-full flex-col items-center justify-center bg-purple text-xs font-medium text-white focus:border-2 focus:border-black focus:border-opacity-40 sm:text-sm">
                   <span className="text-md">p3: 10G</span>
                   <span>md2</span>
                 </button>
@@ -155,9 +155,9 @@ const Custom = () => {
               </div>
             </ReflexSplitter>
 
-            <ReflexElement minSize="25" maxSize="150" className="left-pane">
+            <ReflexElement minSize="50" maxSize="150" className="left-pane">
               <div className="flex h-full w-full flex-col">
-                <button className="flex h-full w-full flex-col items-center justify-center bg-pink text-xs font-medium text-white hover:bg-opacity-90 focus:border-2 focus:border-black sm:text-sm">
+                <button className="flex h-full w-full flex-col items-center justify-center bg-pink text-xs font-medium text-white hover:bg-opacity-90 focus:border-2 focus:border-black focus:border-opacity-40 sm:text-sm">
                   <span className="text-md">p4: 15G</span>
                   <span>md3</span>
                 </button>
@@ -170,7 +170,7 @@ const Custom = () => {
               </div>
             </ReflexSplitter>
 
-            <ReflexElement minSize="125" className="left-pane">
+            <ReflexElement minSize="20" className="left-pane">
               <div className="flex  h-full items-center justify-center gap-2.5 overflow-hidden">
                 <div className="flex text-xs text-white sm:text-sm">
                   free: 1.62TB
