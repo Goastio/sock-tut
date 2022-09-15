@@ -66,7 +66,7 @@ const Custom = () => {
 
             <ReflexElement minSize="25" maxSize="150" className="left-pane">
               <div className="flex h-full w-full flex-col">
-                <button className="flex h-full w-full flex-col items-center justify-center bg-purple text-xs font-medium text-white focus:border-2 focus:border-black sm:text-sm">
+                <button className="flex h-full w-full flex-col items-center justify-center bg-purple font-medium text-white focus:border-2 focus:border-black sm:text-sm">
                   <span className="text-md">p3: 10G</span>
                   <span>md2</span>
                 </button>
