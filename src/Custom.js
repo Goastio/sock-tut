@@ -23,8 +23,8 @@ const Custom = () => {
   const filterMount =
     query === ""
       ? mountOpts
-      : mountOpts.filter((person) => {
-          return person.name.toLowerCase().includes(query.toLowerCase());
+      : mountOpts.filter((mount) => {
+          return mount.name.toLowerCase().includes(query.toLowerCase());
         });
 
   return (
@@ -33,12 +33,12 @@ const Custom = () => {
         <div className="flex h-10 bg-gray rounded-md shadow-md overflow-hidden">
           <ReflexContainer orientation="vertical">
             <ReflexElement minSize="60" maxSize="200" className="left-pane">
-              <button className="flex bg-blue w-full h-full text-sm justify-center items-center active:border-white">
-                <div className="flex flex-col">
+              <div className="flex w-full focus:border-black focus:border-2 h-full flex-col">
+                <button className="flex bg-blue w-full h-full text-sm justify-center items-center">
                   <span>p1: 30G</span>
                   <span>md0</span>
-                </div>
-              </button>
+                </button>
+              </div>
             </ReflexElement>
             <ReflexSplitter propagate={true} />
             <ReflexElement minSize="60" maxSize="200" className="left-pane">
