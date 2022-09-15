@@ -57,7 +57,7 @@ const Custom = () => {
                   <span>md0</span>
                 </div>
               </button>
-            </ReflexElement>  
+            </ReflexElement>
             <ReflexSplitter propagate={true} />
             <ReflexElement minSize="60" maxSize="200" className="left-pane">
               <button className="flex bg-pink w-full h-full text-sm justify-center items-center active:border-white">
@@ -81,47 +81,46 @@ const Custom = () => {
 
         <div className="gap-5 flex flex-col w-full max-w-screen-md mx-auto">
           <div className="flex gap-5">
-            <label className="w-full flex flex-col text-white gap-1.6">
+            <label className="w-full flex flex-col gap-1.6">
               Name
               <input
                 type="text"
-                className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
+                className="w-full text-sm py-2 px-3 border border-gray-200 rounded-md"
               />
             </label>
             <label className="w-full flex flex-col gap-1.6">
               Filesystem
               <input
                 type="text"
-                className="w-full py-2 px-3 border border-gray-700 rounded-md"
+                className="w-full text-sm py-2 px-3 border border-gray-200 rounded-md"
               />
             </label>
           </div>
           <div className="flex gap-5">
-            <label className="w-full flex flex-col text-white gap-1.6">
+            <label className="w-full flex flex-col gap-1.6">
               Type
               <input
                 type="text"
-                className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
+                className="w-full text-sm py-2 px-3 border border-gray-200 rounded-md"
               />
             </label>
-            <label className="w-full flex flex-col text-white gap-1.6">
+            <label className="w-full flex flex-col gap-1.6">
               Mount point
               <input
                 type="text"
-                className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
+                className="w-full text-sm py-2 px-3 border border-gray-200 rounded-md"
               />
             </label>
           </div>
           <div className="flex gap-5">
-            <label className="w-full flex flex-col text-white gap-1.6 pointer-events-none">
+            <label className="w-full flex flex-col gap-1.6 pointer-events-none">
               Size
               <input
                 type="text"
-                placeholder="insert size here"
-                className="w-full py-2 px-3 bg-white bg-opacity-5 rounded-md"
+                className="w-full text-sm py-2 px-3 border border-gray-200 rounded-md"
               />
             </label>
-            <label className="w-full flex flex-col text-white gap-1.6">
+            <label className="w-full flex flex-col gap-1.6">
               <Combobox
                 as="div"
                 value={selectedMount}
@@ -132,7 +131,7 @@ const Custom = () => {
                 </Combobox.Label>
                 <div className="relative">
                   <Combobox.Input
-                    className="w-full rounded-md bg-white bg-opacity-5 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+                    className="w-full rounded-md bg-white bg-opacity-5 py-2 px-3 shadow-sm focus:border-indigo focus:outline-none border border-gray-200 focus:ring-1 focus:ring-indigo sm:text-sm"
                     onChange={(event) => setQuery(event.target.value)}
                     displayValue={(mount) => mount?.name}
                   />
