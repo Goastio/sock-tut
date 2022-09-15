@@ -33,8 +33,8 @@ const Custom = () => {
         <div className="flex h-10 bg-gray rounded-md shadow-md overflow-hidden">
           <ReflexContainer orientation="vertical">
             <ReflexElement minSize="60" maxSize="200" className="left-pane">
-              <div className="flex w-full focus:border-black focus:border-2 h-full flex-col">
-                <button className="flex bg-blue w-full h-full text-sm justify-center items-center">
+              <div className="flex w-full h-full flex-col">
+                <button className="flex focus:border-black focus:border-2 bg-blue w-full h-full text-sm justify-center items-center">
                   <span>p1: 30G</span>
                   <span>md0</span>
                 </button>
