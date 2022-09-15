@@ -30,12 +30,12 @@ const Custom = () => {
   return (
     <div className="flex h-screen flex-col justify-center bg-white text-black">
       <div className="mx-auto flex w-full max-w-screen-md flex-col gap-5 rounded-md border border-gray p-5">
-        <div className="flex h-10 overflow-hidden rounded-md bg-gray">
+        <div className="flex h-10 overflow-hidden rounded-md bg-gray text-xs">
           <ReflexContainer orientation="vertical">
-            <ReflexElement minSize="100" maxSize="200" className="left-pane">
+            <ReflexElement minSize="25" maxSize="150" className="left-pane">
               <div className="flex h-full w-full flex-col">
-                <button className="flex h-full w-full flex-row items-center justify-center bg-blue text-sm focus:border-2">
-                  <span>p1: 30G</span>
+                <button className="flex h-full w-full flex-col items-center justify-center bg-blue text-xs font-medium text-white focus:border-2 focus:border-black sm:text-sm">
+                  <span className="text-md">p1: 30G</span>
                   <span>md0</span>
                 </button>
               </div>
@@ -43,61 +43,139 @@ const Custom = () => {
 
             {
               /* (secondPartition &&) by default it won't display the splitter on first partition */
-              <ReflexSplitter style={{ cursor: "pointer" }} propagate={true}>
+              <ReflexSplitter propagate={true}>
                 <div className="m-[-4px] mt-[1px] flex h-full w-full">
-                  <div className="flex self-center rounded-full bg-neutral-700 py-3 px-1 transition duration-200 hover:bg-neutral-900"></div>
+                  <div className="flex self-center rounded-full bg-neutral-700 py-4 px-1 transition duration-200 hover:bg-neutral-900"></div>
                 </div>
               </ReflexSplitter>
             }
-            <ReflexElement minSize="100" maxSize="200" className="left-pane">
-              <div className="flex h-full w-full">
-                <button className="flex h-full w-full flex-row items-center justify-center bg-indigo text-sm focus:border-2 focus:border-black">
-                  <span>p1: 30G</span> &nbsp;
-                  <span>md0</span>
+            <ReflexElement minSize="25" maxSize="150" className="left-pane">
+              <div className="flex h-full w-full flex-col">
+                <button className="flex h-full w-full flex-col items-center justify-center bg-indigo text-xs font-medium text-white focus:border-2 focus:border-black sm:text-sm">
+                  <span className="text-md">p2: 25G</span>
+                  <span>md1</span>
                 </button>
               </div>
             </ReflexElement>
 
-            <ReflexSplitter style={{ cursor: "pointer" }} propagate={true}>
+            <ReflexSplitter propagate={true}>
               <div className="m-[-4px] mt-[1px] flex h-full w-full">
-                <div className="flex self-center rounded-full bg-neutral-700 py-3 px-1 transition duration-200 hover:bg-neutral-900"></div>
+                <div className="flex self-center rounded-full bg-neutral-700 py-4 px-1 transition duration-200 hover:bg-neutral-900"></div>
               </div>
             </ReflexSplitter>
 
-            <ReflexElement minSize="100" maxSize="200" className="left-pane">
+            <ReflexElement minSize="25" maxSize="150" className="left-pane">
               <div className="flex h-full w-full flex-col">
-                <button className="flex h-full w-full flex-row items-center justify-center bg-purple text-sm focus:border-2 focus:border-black">
-                  <span>p1: 30G</span>
-                  <span>md0</span>
+                <button className="flex h-full w-full flex-col items-center justify-center bg-purple text-xs font-medium text-white focus:border-2 focus:border-black sm:text-sm">
+                  <span className="text-md">p3: 10G</span>
+                  <span>md2</span>
                 </button>
               </div>
             </ReflexElement>
 
-            <ReflexSplitter style={{ cursor: "pointer" }} propagate={true}>
+            <ReflexSplitter propagate={true}>
               <div className="m-[-4px] mt-[1px] flex h-full w-full">
-                <div className="flex self-center rounded-full bg-neutral-700 py-3 px-1 transition duration-200 hover:bg-neutral-900"></div>
+                <div className="flex self-center rounded-full  bg-neutral-700 py-4 px-1 transition duration-200 hover:bg-neutral-900"></div>
               </div>
             </ReflexSplitter>
 
-            <ReflexElement minSize="100" maxSize="200" className="left-pane">
+            <ReflexElement minSize="25" maxSize="150" className="left-pane">
               <div className="flex h-full w-full flex-col">
-                <button className="flex h-full w-full flex-row items-center justify-center bg-pink text-sm focus:border-2 focus:border-black">
-                  <span>p1: 30G</span>
-                  <span>md0</span>
+                <button className="flex h-full w-full flex-col items-center justify-center bg-pink text-xs font-medium text-white hover:bg-opacity-90 focus:border-2 focus:border-black sm:text-sm">
+                  <span className="text-md">p4: 15G</span>
+                  <span>md3</span>
                 </button>
               </div>
             </ReflexElement>
 
-            <ReflexSplitter style={{ cursor: "pointer" }} propagate={true}>
+            <ReflexSplitter propagate={true}>
               <div className="m-[-4px] mt-[1px] flex h-full w-full">
-                <div className="flex self-center rounded-full bg-neutral-700 py-3 px-1 transition duration-200 hover:bg-neutral-900"></div>
+                <div className="flex self-center rounded-full bg-neutral-700 py-4 px-1 transition duration-200 hover:bg-neutral-900"></div>
               </div>
             </ReflexSplitter>
 
             <ReflexElement minSize="125" className="left-pane">
               <div className="flex h-full items-center justify-center gap-2.5 overflow-hidden">
-                <div className="flex text-xs">free 1.62TB</div>
-                <button className="flex">
+                <div className="flex text-xs text-white sm:text-sm">
+                  free: 1.62TB
+                </div>
+                <button className="flex rounded-md transition duration-200 hover:bg-white hover:bg-opacity-[15%]">
+                  <BsPlusSquare className="text-xl opacity-75" />
+                </button>
+              </div>
+            </ReflexElement>
+          </ReflexContainer>
+        </div>
+        <div className="flex h-10 overflow-hidden rounded-md bg-gray text-xs">
+          <ReflexContainer orientation="vertical">
+            <ReflexElement minSize="25" maxSize="150" className="left-pane">
+              <div className="flex h-full w-full flex-col">
+                <button className="flex h-full w-full flex-col items-center justify-center bg-blue text-xs font-medium text-white focus:border-2 focus:border-black sm:text-sm">
+                  <span className="text-md">p1: 30G</span>
+                  <span>md0</span>
+                </button>
+              </div>
+            </ReflexElement>
+
+            {
+              /* (secondPartition &&) by default it won't display the splitter on first partition */
+              <ReflexSplitter propagate={true}>
+                <div className="m-[-4px] mt-[1px] flex h-full w-full">
+                  <div className="flex self-center rounded-full bg-neutral-700 py-4 px-1 transition duration-200 hover:bg-neutral-900"></div>
+                </div>
+              </ReflexSplitter>
+            }
+            <ReflexElement minSize="25" maxSize="150" className="left-pane">
+              <div className="flex h-full w-full flex-col">
+                <button className="flex h-full w-full flex-col items-center justify-center bg-indigo text-xs font-medium text-white focus:border-2 focus:border-black sm:text-sm">
+                  <span className="text-md">p2: 25G</span>
+                  <span>md1</span>
+                </button>
+              </div>
+            </ReflexElement>
+
+            <ReflexSplitter propagate={true}>
+              <div className="m-[-4px] mt-[1px] flex h-full w-full">
+                <div className="flex self-center rounded-full bg-neutral-700 py-4 px-1 transition duration-200 hover:bg-neutral-900"></div>
+              </div>
+            </ReflexSplitter>
+
+            <ReflexElement minSize="25" maxSize="150" className="left-pane">
+              <div className="flex h-full w-full flex-col">
+                <button className="flex h-full w-full flex-col items-center justify-center bg-purple text-xs font-medium text-white focus:border-2 focus:border-black sm:text-sm">
+                  <span className="text-md">p3: 10G</span>
+                  <span>md2</span>
+                </button>
+              </div>
+            </ReflexElement>
+
+            <ReflexSplitter propagate={true}>
+              <div className="m-[-4px] mt-[1px] flex h-full w-full">
+                <div className="flex self-center rounded-full  bg-neutral-700 py-4 px-1 transition duration-200 hover:bg-neutral-900"></div>
+              </div>
+            </ReflexSplitter>
+
+            <ReflexElement minSize="25" maxSize="150" className="left-pane">
+              <div className="flex h-full w-full flex-col">
+                <button className="flex h-full w-full flex-col items-center justify-center bg-pink text-xs font-medium text-white hover:bg-opacity-90 focus:border-2 focus:border-black sm:text-sm">
+                  <span className="text-md">p4: 15G</span>
+                  <span>md3</span>
+                </button>
+              </div>
+            </ReflexElement>
+
+            <ReflexSplitter propagate={true}>
+              <div className="m-[-4px] mt-[1px] flex h-full w-full">
+                <div className="flex self-center rounded-full bg-neutral-700 py-4 px-1 transition duration-200 hover:bg-neutral-900"></div>
+              </div>
+            </ReflexSplitter>
+
+            <ReflexElement minSize="125" className="left-pane">
+              <div className="flex  h-full items-center justify-center gap-2.5 overflow-hidden">
+                <div className="flex text-xs text-white sm:text-sm">
+                  free: 1.62TB
+                </div>
+                <button className="flex rounded-md transition duration-200 hover:bg-white hover:bg-opacity-[15%]">
                   <BsPlusSquare className="text-xl opacity-75" />
                 </button>
               </div>
@@ -111,14 +189,14 @@ const Custom = () => {
               Name
               <input
                 type="text"
-                className="border-gray-200 w-full rounded-md border py-2 px-3 text-sm"
+                className="border-gray-200 w-full rounded-md border py-2 px-3 text-xs sm:text-sm"
               />
             </label>
             <label className="gap-1.6 flex w-full flex-col">
               Filesystem
               <input
                 type="text"
-                className="border-gray-200 w-full rounded-md border py-2 px-3 text-sm"
+                className="border-gray-200 w-full rounded-md border py-2 px-3 text-xs sm:text-sm"
               />
             </label>
           </div>
@@ -127,14 +205,14 @@ const Custom = () => {
               Type
               <input
                 type="text"
-                className="border-gray-200 w-full rounded-md border py-2 px-3 text-sm"
+                className="border-gray-200 w-full rounded-md border py-2 px-3 text-xs sm:text-sm"
               />
             </label>
             <label className="gap-1.6 flex w-full flex-col">
               Mount point
               <input
                 type="text"
-                className="border-gray-200 w-full rounded-md border py-2 px-3 text-sm"
+                className="border-gray-200 w-full rounded-md border py-2 px-3 text-xs sm:text-sm"
               />
             </label>
           </div>
@@ -143,7 +221,7 @@ const Custom = () => {
               Size
               <input
                 type="text"
-                className="border-gray-200 w-full rounded-md border py-2 px-3 text-sm"
+                className="border-gray-200 w-full rounded-md border py-2 px-3 text-xs sm:text-sm"
               />
             </label>
             <label className="gap-1.6 flex w-full flex-col">
@@ -157,7 +235,7 @@ const Custom = () => {
                 </Combobox.Label>
                 <div className="relative">
                   <Combobox.Input
-                    className="border-gray-200 w-full rounded-md border bg-white bg-opacity-5 py-2 px-3 shadow-sm focus:border-indigo focus:outline-none focus:ring-1 focus:ring-indigo sm:text-sm"
+                    className="border-gray-200 w-full rounded-md border bg-white bg-opacity-5 py-2 px-3 shadow-sm focus:border-indigo focus:outline-none focus:ring-1 focus:ring-indigo sm:text-xs sm:text-sm"
                     onChange={(event) => setQuery(event.target.value)}
                     displayValue={(mount) => mount?.name}
                   />
@@ -169,7 +247,7 @@ const Custom = () => {
                   </Combobox.Button>
 
                   {filterMount.length > 0 && (
-                    <Combobox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 px-[4px] text-base text-black shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                    <Combobox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 px-[4px] text-base text-black shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-xs sm:text-sm">
                       {filterMount.map((mount) => (
                         <Combobox.Option
                           key={mount.id}
