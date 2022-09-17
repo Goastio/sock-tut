@@ -309,7 +309,7 @@ export default Custom;
 //         firstValue += 10
 //     }
 //     console.log(firstValue)
-// };
+// }; 
 
 // let first = `${firstValue}%`;
 // let second = `${secondValue}%`;
